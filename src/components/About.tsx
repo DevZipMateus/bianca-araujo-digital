@@ -25,11 +25,11 @@ const About = () => {
           </div>
 
           {/* Right column - Image */}
-          <div className="lg:w-1/2 animate-slide-in-right">
+          <div className="lg:w-1/2 animate-slide-in-right flex justify-center">
             <img 
               src={aboutImage} 
               alt="Bianca Araújo - Contadora" 
-              className="rounded-lg shadow-xl w-full object-cover"
+              className="rounded-lg shadow-xl w-4/5 object-cover"
             />
           </div>
         </div>
