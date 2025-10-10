@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-primary to-secondary">
-      <div className="container mx-auto px-4 py-20">
+    <section id="inicio" className="min-h-screen flex items-center pt-20 relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-secondary/85" />
+      
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Bianca Araújo Contabilidade e Consultoria
