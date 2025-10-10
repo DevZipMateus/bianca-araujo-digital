@@ -1,5 +1,6 @@
 import { FileText, Building2, Calculator, Users, TrendingUp, FileCheck, Receipt, UserCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import servicesImage from "@/assets/services-image.jpg";
 
 const Services = () => {
   const services = [
@@ -21,37 +22,51 @@ const Services = () => {
   return (
     <section id="servicos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Nossos serviços</h2>
-          <p className="text-lg text-muted-foreground">
-            Soluções completas em contabilidade e consultoria para pessoa física e empresas
-          </p>
-        </div>
+        <div className="flex flex-col lg:flex-row gap-12 items-start mb-16">
+          {/* Left column - Image */}
+          <div className="lg:w-1/3 animate-fade-in">
+            <img 
+              src={servicesImage} 
+              alt="Serviços contábeis profissionais" 
+              className="rounded-lg shadow-xl w-full object-cover sticky top-24"
+            />
+          </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all hover:-translate-y-1 animate-scale-in" style={{ animationDelay: `${index * 50}ms` }}>
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{service.title}</h3>
-                <p className="text-sm text-muted-foreground">{service.description}</p>
-              </Card>
-            );
-          })}
-        </div>
+          {/* Right column - Content */}
+          <div className="lg:w-2/3">
+            <div className="text-center lg:text-left mb-12 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Nossos serviços</h2>
+              <p className="text-lg text-muted-foreground">
+                Soluções completas em contabilidade e consultoria para pessoa física e empresas
+              </p>
+            </div>
 
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-center text-primary">Produtos</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {products.map((product, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <h4 className="text-xl font-semibold mb-2 text-foreground">{product.title}</h4>
-                <p className="text-muted-foreground">{product.description}</p>
-              </Card>
-            ))}
+        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <Card key={index} className="p-6 hover:shadow-lg transition-all hover:-translate-y-1 animate-scale-in" style={{ animationDelay: `${index * 50}ms` }}>
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">{service.title}</h3>
+                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-center lg:text-left text-primary">Produtos</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {products.map((product, index) => (
+                  <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                    <h4 className="text-xl font-semibold mb-2 text-foreground">{product.title}</h4>
+                    <p className="text-muted-foreground">{product.description}</p>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
