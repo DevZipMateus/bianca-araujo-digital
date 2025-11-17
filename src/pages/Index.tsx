@@ -7,6 +7,7 @@ import Plans from "@/components/Plans";
 import Testimonials from "@/components/Testimonials";
 
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
         <Testimonials />
         <Contact />
       </main>
+      <Footer />
       <WhatsAppButton />
     </div>
   );
