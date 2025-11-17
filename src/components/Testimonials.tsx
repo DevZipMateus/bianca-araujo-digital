@@ -1,5 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Testimonials = () => {
   const testimonials = [
@@ -35,22 +42,26 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="p-6 hover:shadow-lg transition-shadow animate-scale-in relative"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <Quote className="w-10 h-10 text-primary/20 absolute top-4 right-4" />
-              <p className="text-muted-foreground mb-6 relative z-10">"{testimonial.text}"</p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
+        <Carousel className="max-w-4xl mx-auto">
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index}>
+                <Card className="p-8 md:p-12 hover:shadow-lg transition-shadow relative">
+                  <Quote className="w-12 h-12 text-primary/20 absolute top-6 right-6" />
+                  <p className="text-lg md:text-xl text-muted-foreground mb-8 relative z-10 leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="border-t pt-6">
+                    <p className="font-semibold text-lg text-foreground">{testimonial.name}</p>
+                    <p className="text-muted-foreground">{testimonial.company}</p>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
