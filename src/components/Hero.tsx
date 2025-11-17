@@ -12,13 +12,13 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black drop-shadow-lg">
             Bianca Araújo Contabilidade e Consultoria
           </h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-foreground/90 font-light drop-shadow-lg">
+          <h2 className="text-xl md:text-2xl mb-8 text-black/90 font-light drop-shadow-lg">
             Transforme burocracias em oportunidades de crescimento com assessoria contábil personalizada e confiável
           </h2>
-          <p className="text-lg md:text-xl mb-10 text-foreground/80 drop-shadow-md">
+          <p className="text-lg md:text-xl mb-10 text-black/80 drop-shadow-md">
             Mais que números, uma parceria para o seu sucesso
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
