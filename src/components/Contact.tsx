@@ -6,7 +6,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: Phone, label: "Telefone", value: "(37) 99921-4954", href: "https://wa.me/5537999214954" },
     { icon: Mail, label: "E-mail", value: "biancaaraujocont@gmail.com", href: "mailto:biancaaraujocont@gmail.com" },
-    { icon: MapPin, label: "Endereço", value: "Rua Manoel Gonçalves, 91, Sala G, Centro, Itaúna-MG - CEP 35680-055", href: null },
+    { icon: MapPin, label: "Endereço", value: "Rua Manoel Gonçalves, 91, Sala G, Centro, Itaúna-MG - CEP 35680-055", href: "https://www.google.com/maps/search/?api=1&query=Rua+Manoel+Gonçalves,+91,+Sala+G,+Centro,+Itaúna-MG" },
     { icon: Clock, label: "Horário", value: "Segunda a Sexta: 08h às 17h", href: null }
   ];
 
