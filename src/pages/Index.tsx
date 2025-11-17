@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Plans from "@/components/Plans";
 import Testimonials from "@/components/Testimonials";
-import Gallery from "@/components/Gallery";
+
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -20,7 +20,6 @@ const Index = () => {
         <About />
         <EgestorERP />
         <Testimonials />
-        <Gallery />
         <Contact />
       </main>
       <WhatsAppButton />
