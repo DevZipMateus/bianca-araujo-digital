@@ -15,10 +15,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <EgestorERP />
-        <About />
         <Services />
         <Plans />
+        <About />
+        <EgestorERP />
         <Testimonials />
         <Gallery />
         <Contact />
