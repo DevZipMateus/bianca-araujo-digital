@@ -11,7 +11,7 @@ const Hero = () => {
       />
       
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in bg-white/[0.02] backdrop-blur-sm p-8 md:p-12 rounded-lg">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in bg-white/[0.01] backdrop-blur-[2px] p-8 md:p-12 rounded-lg">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-black drop-shadow-lg">
             Bianca Araújo Contabilidade e Consultoria
           </h1>
