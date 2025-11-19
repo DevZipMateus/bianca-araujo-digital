@@ -43,13 +43,15 @@ const Services = () => {
             {services.slice(0, 4).map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card key={index} className="p-6 hover:shadow-lg transition-all hover:-translate-y-1 animate-scale-in" style={{ animationDelay: `${index * 50}ms` }}>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
+                <div key={index} className="flex gap-3 animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                  <div className="flex-shrink-0">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
-                </Card>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1 text-foreground">{service.title}</h3>
+                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -61,13 +63,15 @@ const Services = () => {
             {services.slice(4, 8).map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card key={index} className="p-6 hover:shadow-lg transition-all hover:-translate-y-1 animate-scale-in" style={{ animationDelay: `${(index + 4) * 50}ms` }}>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
+                <div key={index} className="flex gap-3 animate-fade-in" style={{ animationDelay: `${(index + 4) * 50}ms` }}>
+                  <div className="flex-shrink-0">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
-                </Card>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1 text-foreground">{service.title}</h3>
+                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                  </div>
+                </div>
               );
             })}
           </div>
