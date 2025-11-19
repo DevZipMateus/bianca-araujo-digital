@@ -1,6 +1,7 @@
 import { FileText, Building2, Calculator, Users, TrendingUp, FileCheck, Receipt, UserCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import servicesImage from "@/assets/services-image.jpg";
+import galleryImage from "@/assets/gallery-2.jpg";
 
 const Services = () => {
   const services = [
@@ -72,7 +73,7 @@ const Services = () => {
           </div>
           <div className="lg:w-1/3 animate-fade-in">
             <img 
-              src={servicesImage} 
+              src={galleryImage} 
               alt="Consultoria contábil especializada" 
               className="rounded-lg shadow-xl w-full h-full object-cover"
             />
