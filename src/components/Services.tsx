@@ -39,17 +39,17 @@ const Services = () => {
               className="rounded-lg shadow-xl w-full h-full object-cover"
             />
           </div>
-          <div className="lg:w-2/3 flex flex-col gap-4">
+          <div className="lg:w-2/3 flex flex-col gap-6">
             {services.slice(0, 4).map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="flex gap-3 animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
-                  <div className="flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div key={index} className="flex gap-4 py-4 animate-fade-in" style={{ animationDelay: `${index * 50}ms` }}>
+                  <div className="flex-shrink-0 mt-1">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1 text-foreground">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">{service.title}</h3>
+                    <p className="text-base text-muted-foreground leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               );
@@ -59,17 +59,17 @@ const Services = () => {
 
         {/* Second row - 4 services left + Image right */}
         <div className="flex flex-col lg:flex-row gap-8 mb-16">
-          <div className="lg:w-2/3 flex flex-col gap-4">
+          <div className="lg:w-2/3 flex flex-col gap-6">
             {services.slice(4, 8).map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="flex gap-3 animate-fade-in" style={{ animationDelay: `${(index + 4) * 50}ms` }}>
-                  <div className="flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div key={index} className="flex gap-4 py-4 animate-fade-in" style={{ animationDelay: `${(index + 4) * 50}ms` }}>
+                  <div className="flex-shrink-0 mt-1">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1 text-foreground">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">{service.title}</h3>
+                    <p className="text-base text-muted-foreground leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               );
