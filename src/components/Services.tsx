@@ -39,7 +39,7 @@ const Services = () => {
               className="rounded-lg shadow-xl w-full h-full object-cover"
             />
           </div>
-          <div className="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+          <div className="lg:w-2/3 flex flex-col gap-4">
             {services.slice(0, 4).map((service, index) => {
               const Icon = service.icon;
               return (
@@ -59,7 +59,7 @@ const Services = () => {
 
         {/* Second row - 4 services left + Image right */}
         <div className="flex flex-col lg:flex-row gap-8 mb-16">
-          <div className="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+          <div className="lg:w-2/3 flex flex-col gap-4">
             {services.slice(4, 8).map((service, index) => {
               const Icon = service.icon;
               return (
